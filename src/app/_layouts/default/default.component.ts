@@ -3,9 +3,6 @@ import { Router } from '@angular/router'
 
 import { PoMenuItem } from '@po-ui/ng-components'
 
-import { ProJsToAdvplService } from '@totvs/protheus-lib-core'
-import { ProAppConfigService } from '@totvs/protheus-lib-core'
-
 @Component({
   selector: "app-default",
   templateUrl: "./default.component.html",
@@ -13,7 +10,7 @@ import { ProAppConfigService } from '@totvs/protheus-lib-core'
 })
 
 export class DefaultComponent {
-  menus: PoMenuItem[] = [
+  readonly menus: PoMenuItem[] = [
     {
       label: 'Home',
       shortLabel: 'Home',
@@ -37,19 +34,11 @@ export class DefaultComponent {
       label: 'Sair',
       shortLabel: 'Sair',
       icon: 'fa-solid fa-house-chimney',
-      action: () => this.proAppConfigService.callAppClose(),
+      action: () => console.log("Saiu"),
     },
   ]
 
   constructor(
     private router: Router,
-    private proAppConfigService: ProAppConfigService,
-    private proJsToAdvplService: ProJsToAdvplService,
-  ) {
-    if (this.proAppConfigService.insideProtheus()) {
-      this.router.navigate(['home'])
-      return
-    }
-    this.proJsToAdvplService.jsToAdvpl('mensagemJavascript', 'Comando enviado pelo Javascript')
-  }
+  ) { }
 }

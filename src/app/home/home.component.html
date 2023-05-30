@@ -12,29 +12,9 @@
     </div>
   </form>
 
-  <po-container title="User">
-    <h3> User </h3>
-    <p> ID: {{ user.id }} </p>
-    <p> UserName: {{ user.userName }} </p>
-    <p> DisplayName: {{ user.displayName }} </p>
-  </po-container>
-
-  <po-container title="Mensagem">
-    <h3> Mensagem </h3>
-    <div *ngFor="let msg of message">
-      {{ msg }}
-    </div>
-  </po-container>
-
-  <h3> Result </h3>
-  <po-container *ngFor="let res of result">
-    <p> Rota: {{ res.route }} </p>
-    <p> Data: {{ res.data }} </p>
-  </po-container>
-
   <po-table *ngIf="!isLoading && items && items.length > 0"
     p-container="shadow"
-    [p-items]="items"
+    [p-items]="[]"
     >
   </po-table>
 </po-page-default>
