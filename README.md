@@ -16,19 +16,22 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Git
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+ Comando     | Descrição                                           | Uso
+-------------|-----------------------------------------------------|-------------
+status       | Mostra as alterações atuais                         | `git status`
+add .        | Adiciona os arquivos alterados para serem comitados | `git add .`
+commit -m "" | Dá um nome/descrição a alteração                    | `git commit -m "feat(): Minha mensagem"`
+push         | Envia as alterações comitadas para a nuvem          | `git push`
 
-## Running end-to-end tests
+## Commit semântico
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Ao fazer um commit, você pode colocar a descrição que quiser, porém, a comunidade adotou um padrão pra facilitar quando você for pesquisar as alterações
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-
-## Informações adicionais
-
-https://tdn.totvs.com.br/pages/releaseview.action?pageId=706137846
-https://tdn.totvs.com.br/display/public/framework/FwCallApp+-+Abrindo+aplicativos+Web+no+Protheus
+Tag         | descrição
+------------|-------------------------------------------------------------------
+feat():     | Indica uma melhoria de funcionalidade, algo que não existia antes
+fix():      | Indica que houve uma correção de algo que já existia
+refactor(): | Indica que houve uma alteração, mas isso não é nem uma melhoria nem uma correção de código, Alterou um título de "Lista de E-mail" para "Lista de Emails"
+docs()      | Indica que houve uma alteração num arquivo de documentação, como por exemplo, esse readme.md
